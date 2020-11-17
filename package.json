@@ -1,0 +1,49 @@
+{
+  "name": "react-native-clone-project",
+  "version": "1.0.0",
+  "private": false,
+  "bin": {
+    "clone": "index.js"
+  },
+  "description": "Create a project using other project and rename the folders e files",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cli-table": "^0.3.1",
+    "commander": "^6.2.0",
+    "figlet": "^1.5.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "loading-cli": "^1.1.0",
+    "path": "^0.12.7",
+    "react-native-rename": "^2.5.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BuuhV Inc",
+  "files": [
+      "index.js",
+      "README.md"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/geeknection/react-native-clone-project.git"
+  },
+  "keywords": [
+      "react-native clone project",
+      "react-native white label",
+      "white label"
+  ],
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/geeknection/react-native-clone-project/issues"
+  },
+  "publishConfig": {
+      "registry": "https://registry.npmjs.org/",
+      "access": "public"
+  }
+}
