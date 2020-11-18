@@ -41,6 +41,7 @@ async function renameProject(project) {
         `${project.dest}/*.js`,
         `${project.dest}/*.json`,
         `${project.dest}/**/*.xml`,
+        `${project.dest}/**/*.pbxproj`,
         `${project.dest}/**/*.java`,
         `${project.dest}/**/*.gradle`,
         `${project.dest}/**/*.h`,
@@ -183,10 +184,10 @@ program
             shell.rm('-rf', answers.dest);
             setTimeout( async () => {
                 if (os.platform === 'linux') {
-                    shell.exec(`rsync -av --progress ${answers.source} / ${answers.dest} --exclude node_modules --exclude .history --exclude .git`);
+                    shell.exec(`rsync -av --progress ${answers.source} / ${answers.dest} --exclude node_modules --exclude .history --exclude .git --exclude android/.gralde --exclude android/app/build --exclude android/build --exclude android/.idea`);
                 }
                 else {
-                    shell.exec(`robocopy ${answers.source} ${answers.dest} /mir /xd node_modules .history .git`);
+                    shell.exec(`robocopy ${answers.source} ${answers.dest} /mir /xd node_modules .history .git android/.gralde android/app/build android/build android/.idea`);
                 }
                 load.stop();
                 
